@@ -282,7 +282,7 @@ if __name__ == '__main__':
     parser.add_argument('--neg_samples', type=int, default=99)  # 负样本抽样个数
     parser.add_argument('--lamb', type=float, default=0.8)  # loss 加权参数
 
-    parser.add_argument('--data_dir', type=str, default='Food-Kitchen-50',
+    parser.add_argument('--data_dir', type=str, default='Food-Kitchen',
                         help='Food-Kitchen, Movie-Book, Entertainment-Education')  # domain
 
     config = parser.parse_args()
