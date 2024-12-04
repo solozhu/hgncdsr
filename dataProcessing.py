@@ -150,19 +150,6 @@ class DataLoader(object):
 
         """ 与 preprocess 类似"""
 
-        if "Enter" in self.domains:
-            max_len = 30
-            self.opt.maxlen = 30
-            self.opt.L = 30
-        elif 'Movie' in self.domains or 'Food' in self.domains:
-            max_len = 15
-            self.opt.maxlen = 15
-            self.opt.L = 15
-        else:
-            max_len = 15
-            self.opt.maxlen = 15
-            self.opt.L = 15
-
         processed = []  
         for d, user in zip(self.test_data, self.test_user):  # the pad is needed! but to be careful.
             xd = []
@@ -265,19 +252,6 @@ class DataLoader(object):
             print("")
 
         """ 构造成训练需要的格式 """
-        if "Enter" in self.domains:
-            max_len = 30
-            self.opt.maxlen = 30
-            self.opt.L = 30
-        elif 'Movie' in self.domains or 'Food' in self.domains:
-            max_len = 15
-            self.opt.maxlen = 15
-            self.opt.L = 15
-        else:
-            max_len = 15
-            self.opt.maxlen = 15
-            self.opt.L = 15
-
 
         processed = []
 
