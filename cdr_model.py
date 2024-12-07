@@ -24,23 +24,18 @@ class HGN_CDR(nn.Module):
         self.position_embeddings = nn.Embedding(L+1, dims, padding_idx=0).to(device)
 
         # feature gate
-        self.feature_gate_user = nn.Linear(dims, dims).to(device)       # 对应论文中的参数 Wg1
+        self.feature_gate_user = nn.Linear(dims, dims).to(device)       
 
-        self.feature_gate_item_src = nn.Linear(dims, dims).to(device)   # 对应论文中的参数 Wg2
-        self.feature_gate_item_tgt = nn.Linear(dims, dims).to(device)   # 对应论文中的参数 Wg3
-        self.feature_gate_item = nn.Linear(dims, dims).to(device)       # 对应论文中的参数 Wg4
+        self.feature_gate_item_src = nn.Linear(dims, dims).to(device)   
+        self.feature_gate_item_tgt = nn.Linear(dims, dims).to(device) 
+        self.feature_gate_item = nn.Linear(dims, dims).to(device)     
 
         # instance gate
-        # 对应论文中的参数 Wg5
-        self.instance_gate_user = Variable(torch.zeros(dims, L).type(torch.FloatTensor),requires_grad=True).to(device)      
-        # 对应论文中的参数 wg6
-        self.instance_gate_position = Variable(torch.zeros(dims, 1).type(torch.FloatTensor), requires_grad=True).to(device)
 
-        # 对应论文中的参数 wg7
+        self.instance_gate_user = Variable(torch.zeros(dims, L).type(torch.FloatTensor),requires_grad=True).to(device)      
+        self.instance_gate_position = Variable(torch.zeros(dims, 1).type(torch.FloatTensor), requires_grad=True).to(device)
         self.instance_gate_item_src = Variable(torch.zeros(dims, 1).type(torch.FloatTensor),requires_grad=True).to(device)
-        # 对应论文中的参数 wg8
         self.instance_gate_item_tgt = Variable(torch.zeros(dims, 1).type(torch.FloatTensor),requires_grad=True).to(device)
-        # 对应论文中的参数 wg9
         self.instance_gate_item = Variable(torch.zeros(dims, 1).type(torch.FloatTensor),requires_grad=True).to(device)
 
         
