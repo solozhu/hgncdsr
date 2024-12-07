@@ -2,15 +2,12 @@ import math
 
 
 def HR_at_k(predicted, flag, topk):
-    # 注意这里 predicted 里面都是index，不是具体的item ID
     sum_HR_x = 0.0
     num_x = 0.0
     sum_HR_y = 0.0
     num_y = 0.0
     num = len(predicted)
     for i in range(num):
-        # 由于我们在候选物品中把 ground truth 放到了第一个位置上，
-        # 所以其 index 为 0，所以我们只需要看top-k预测结果中是否有 0 ，有则命中
         act_set = set([0])
         pred_set = set(predicted[i][:topk])
         if flag[i]:
