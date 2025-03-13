@@ -1,11 +1,16 @@
 # HGNCDSR: Hierarchical Gating Network for Cross-Domain Sequential Recommendation
 
-This repository contains the official implementation of the paper **"Hierarchical Gating Network for Cross-Domain Sequential 
-Recommendation"**. 
+The implementation of the paper:
+
+Wang, Shuliang, Zhu, Jiabao and Ruan, Sijie,"**Hierarchical Gating Network for Cross-Domain Sequential Recommendation**" , in the ACM Transactions on Information Systems, accepted on 16 January 2025.
 
 paper link: https://doi.org/10.1145/3715321
 
+Please cite our paper if you use our code.Thanks!
+
 Contact: jiabao@bit.edu.cn
+
+Feel free to send me an email if you have any question.
 
 Bibtex
 
